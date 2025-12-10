@@ -1,91 +1,96 @@
 Telco Customer Churn Prediction (Machine Learning Project)
-This project builds a customer churn prediction model using the popular Telco Customer Churn dataset.
-It includes full data exploration, preprocessing, model training, evaluation, and a reusable inference pipeline.
+This project builds a customer churn prediction model using the Telco Customer Churn dataset.
+It includes full exploratory data analysis (EDA), preprocessing, model training, evaluation, and a reusable inference pipeline.
 The goal is to identify customers who are most likely to stop using telecom services, enabling proactive retention strategies.
 🚀 Project Highlights
-Complete end-to-end ML pipeline
-Clean and modular code (Python scripts in src/)
-Exploratory Data Analysis notebook
-Preprocessing pipeline
-Model training + hyperparameters
-Threshold optimisation
-Evaluation metrics
-Saved models ready for deployment (models/ folder)
+Full end-to-end machine learning pipeline
+Clean and modular Python code (src/ folder)
+Exploratory Data Analysis in Jupyter Notebook
+Feature engineering and preprocessing pipeline
+Machine learning model training and optimisation
+Evaluation metrics and threshold selection
+Saved models for reuse and deployment
+Professional project structure suitable for portfolio use
 📂 Repository Structure
 telco-churn-ml/
 │
-├── data/                    # Dataset (CSV)
+├── data/                        # Dataset (CSV)
 │
 ├── notebooks/
-│   └── 01_eda_telco_churn.ipynb   # EDA notebook
+│   └── 01_eda_telco_churn.ipynb # EDA notebook
 │
-├── src/                     # Python modules for ML pipeline
-│   ├── preprocess.py        # Data cleaning and encoding
-│   ├── train.py             # Model training script
-│   ├── evaluation.py        # Evaluation metrics
-│   ├── predict.py           # Make new predictions
-│   └── threshold.py         # Threshold optimisation
+├── src/                         # Python modules (ML pipeline)
+│   ├── preprocess.py            # Data cleaning & encoding
+│   ├── train.py                 # Model training script
+│   ├── evaluation.py            # Evaluation metrics
+│   ├── predict.py               # Predict churn for new customers
+│   └── threshold.py             # Threshold optimisation
 │
 ├── models/
-│   ├── telco_churn_model.pkl       # Final trained model
-│   └── decision_threshold.pkl       # Optimized classification threshold
+│   ├── telco_churn_model.pkl    # Final trained model
+│   └── decision_threshold.pkl   # Optimized classification threshold
 │
-├── requirements.txt          # Python environment
-└── README.md                 # Project documentation
-📊 EDA Summary
-Explored customer demographics, services, and billing
-Identified missing values and outliers
-Investigated churn patterns
-Found important drivers such as:
-Contract type
-Monthly charges
-Tenure
-Payment method
-Internet service
-Visualisations include distributions, correlations, and churn comparisons.
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project documentation
+📊 Exploratory Data Analysis (EDA)
+The EDA notebook includes:
+Customer demographics analysis
+Contract types, payment methods, and tenure patterns
+Service usage analysis (internet, phone, streaming services)
+Churn distribution and imbalance check
+Correlation heatmaps
+Visual patterns related to churn
+Key Findings:
+Month-to-month contracts → highest churn
+Electronic check payment → most churned customers
+Higher monthly charges → strong churn indicator
+Senior citizens and short-tenure customers churn more frequently
 🤖 Machine Learning Pipeline
-1️⃣ Preprocessing
-Handled in preprocess.py:
-Convert numerical and categorical features
-One-hot encoding
+1️⃣ Preprocessing (preprocess.py)
+Categorical encoding
+Numerical standardisation
 Missing value handling
-Scaling of numeric columns
-2️⃣ Model Training
-Performed via train.py:
-Logistic Regression / Random Forest (depending on your script)
-Train-test split
-Model saving using joblib
-3️⃣ Threshold Optimization
-threshold.py selects the best decision threshold for churn classification.
-4️⃣ Evaluation
-evaluation.py computes:
+Feature selection
+2️⃣ Model Training (train.py)
+Train/test split
+Logistic Regression / Random Forest (based on your script)
+Hyperparameter choices
+Model saved using joblib
+3️⃣ Threshold Optimization (threshold.py)
+Finds the best probability threshold for classification
+Improves recall and precision for churn cases
+4️⃣ Model Evaluation (evaluation.py)
+Computes:
 Accuracy
 Precision
 Recall
 F1-score
 Confusion matrix
-5️⃣ Prediction Script
-predict.py loads the model and predicts churn for new customer data.
-📁 Saved Models
-telco_churn_model.pkl → The trained model
-decision_threshold.pkl → Best classification threshold
-These are used by predict.py for inference.
+5️⃣ Prediction Script (predict.py)
+Loads:
+telco_churn_model.pkl
+decision_threshold.pkl
+Then predicts churn for new customer data.
+💾 Saved Models
+File	Description
+telco_churn_model.pkl	Final trained churn classifier
+decision_threshold.pkl	Best probability threshold for classification
 ▶️ How to Run the Project
-Install dependencies:
+Install dependencies
 pip install -r requirements.txt
-Train the model:
+Train the model
 python src/train.py
-Evaluate the model:
+Evaluate performance
 python src/evaluation.py
-Run predictions:
+Run predictions
 python src/predict.py
 🧠 Conclusion
 This project demonstrates:
-Strong understanding of machine learning workflow
-Ability to structure a real-world ML project professionally
-Clear separation of concerns (EDA vs scripts vs models)
-Reproducible code and saved models
-It is suitable for inclusion in:
-✔️ Data Analyst portfolio
-✔️ Machine Learning Engineer applications
-✔️ Python projects on GitHub
+Strong understanding of the complete ML lifecycle
+Clean, modular Python code suitable for real-world use
+Reproducible pipeline with saved models
+Solid EDA and feature engineering
+Professional GitHub structure ideal for job applications
+✔️ Great for Data Analyst roles
+✔️ Great for Machine Learning Engineer roles
+✔️ Excellent addition to your GitHub portfolio
